@@ -1,0 +1,45 @@
+/* Reset and background */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+  font-family: 'Courier New', monospace;
+  overflow: hidden;
+}
+
+/* Container for entire screen */
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  flex-direction: column;
+}
+
+/* Where the sentence goes */
+#sentence-container {
+  position: relative;
+  width: 90%;
+  max-width: 800px;
+  height: 60%;
+}
+
+/* Style for individual words */
+.word {
+  position: absolute;
+  font-size: 1.5rem;
+  white-space: nowrap;
+  cursor: grab;
+  transition: transform 0.3s ease;
+}
+
+/* When sentence is ordered (initial) */
+.word.ordered {
+  position: relative;
+  transform: none;
+  margin: 0 6px;
+  cursor: default;
+}
